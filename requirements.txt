@@ -1,0 +1,6 @@
+﻿pytest==3.10
+pytest-allure-adaptor==1.7.10
+selenium==3.141.0
+pytest-selenium==1.17.0
+Appium-Python-Client==0.28
+
