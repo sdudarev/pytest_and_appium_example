@@ -40,7 +40,8 @@ class TestExamples:
                                              '/android.widget.FrameLayout/android.widget.LinearLayout/android'
                                              '.widget.FrameLayout/android.view.ViewGroup/android.widget'
                                              '.LinearLayout/android.widget.Button[2]').click()
-         android_driver.implicitly_wait(3)
+
+        android_driver.implicitly_wait(3)
 
     def test_winner_1(self, android_winner):
         android_winner.find_elements_by_class_name('android.widget.EditText')[0].send_keys('vvd1')
