@@ -44,6 +44,7 @@ class TestExamples:
         android_driver.implicitly_wait(3)
 
     def test_winner_1(self, android_winner):
+        android_winner.implicitly_wait(5)
         android_winner.find_elements_by_class_name('android.widget.EditText')[0].send_keys('vvd1')
         password = android_winner.find_elements_by_class_name('android.widget.EditText')[1]
         password.click()
@@ -61,9 +62,10 @@ class TestExamples:
                                                       '.ViewGroup/android.widget.TextView[3]').text
         assert test == 'Задайте код доступа'
         assert test_2 == 'Повторите код доступа'
-
-        android_winner.find_element_by_class_name('android.widget.Button')[7].click()
-
+        android_winner.implicitly_wait(5)
+        android_winner.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout'
+                                             '/android.widget.FrameLayout/android.widget.LinearLayout/android.widget'
+                                             '.FrameLayout/android.view.ViewGroup/android.widget.Button').click()
         test_3 = android_winner.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget'
                                                       '.LinearLayout/android.widget.FrameLayout/android.widget'
                                                       '.LinearLayout/android.widget.FrameLayout/android.widget'
